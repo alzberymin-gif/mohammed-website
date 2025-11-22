@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>محمد المجاهد - مصمم مواقع</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+      color: #0a1a2f;
+    }
+
+    header {
+      background: #1e3a8a;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2, h3, h4 {
+      color: #1e3a8a;
+    }
+
+    .projects, .skills {
+      display: grid;
+      gap: 20px;
+    }
+
+    .project, .skill {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    button {
+      background: #ffd700;
+      color: #0a1a2f;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .contact-direct {
+      background: linear-gradient(180deg,#3b82f6,#1e3a8a);
+      padding: 20px;
+      border-radius: 12px;
+      color: white;
+      margin-top: 20px;
+      box-shadow: 0 8px 30px rgba(10,26,47,0.2);
+    }
+
+    .contact-direct a {
+      color: #ffd700;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #1e3a8a;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>محمد المجاهد</h1>
+  <p>مصمم مواقع</p>
+  <nav>
+    <a href="#about">عني</a>
+    <a href="#projects">أعمالي</a>
+    <a href="#skills">مهاراتي</a>
+    <a href="#contact">تواصل</a>
+  </nav>
+</header>
+
+<section id="about">
+  <h2>مرحباً، أنا محمد المجاهد</h2>
+  <p>أصمم وأطوّر مواقع احترافية متجاوبة تضع تجربة المستخدم في المقام الأول. أقدّم تصميمات حديثة وتطوير سريع يناسب أعمالك.</p>
+  <p>خدمات سريعة · تصميم متجاوب · دعم فني</p>
+  <h3>من أنا</h3>
+  <p>أنا محمد المجاهد — مصمم ومطور مواقع ويب. أركز على تصميم واجهات نظيفة، تجربة مستخدم ممتازة، وتطوير صفحات سريعة التحميل. أتعامل مع HTML, CSS, JavaScript، ولدي خبرة في بناء مواقع جاهزة للنشر على GitHub Pages.</p>
+  <ul>
+    <li>✔️ تصميم واجهات حديثة</li>
+    <li>✔️ مواقع متجاوبة وسريعة</li>
+    <li>✔️ تحسين SEO أساسي</li>
+    <li>✔️ دعم بعد التسليم</li>
+  </ul>
+</section>
+
+<section id="projects">
+  <h2>أعمالي</h2>
+  <div class="projects">
+    <div class="project">
+      <h3>مشروع 1: مشروع تعريفي</h3>
+      <p>موقع تعريفي بسيط لعرض الأعمال والخدمات.</p>
+    </div>
+    <div class="project">
+      <h3>مشروع 2: متجر إلكتروني</h3>
+      <p>واجهة متجر منوعة مع صفحات منتجات وعربة تسوق.</p>
+    </div>
+    <div class="project">
+      <h3>مشروع 3: موقع شخصي</h3>
+      <p>سيرة ذاتية رقمية مع معرض مشاريع تفاعلي.</p>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>مهاراتي</h2>
+  <div class="skills">
+    <div class="skill">HTML</div>
+    <div class="skill">CSS</div>
+    <div class="skill">JavaScript</div>
+    <div class="skill">Responsive Design</div>
+    <div class="skill">UI/UX</div>
+    <div class="skill">GitHub</div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>تواصل معي</h2>
+  <form>
+    <label for="name">الاسم</label>
+    <input id="name" name="name" type="text" required>
+
+    <label for="email">البريد الإلكتروني</label>
+    <input id="email" name="email" type="email" required>
+
+    <label for="message">الرسالة</label>
+    <textarea id="message" name="message" required></textarea>
+
+    <button type="submit">إرسال</button>
+  </form>
+
+  <div class="contact-direct">
+    <h4>أو تواصل مباشرة</h4>
+    <p>📞 الهاتف: <a href="tel:+967735896993">+967735896993</a></p>
+    <p>💬 واتساب: <a href="https://wa.me/967735896993" target="_blank">ابدأ محادثة</a></p>
+    <p>✉️ البريد الإلكتروني: <a href="mailto:alkimoha027@gmail.com">alkimoha027@gmail.com</a></p>
+  </div>
+</section>
+
+<footer>
+  © 2025 محمد المجاهد — مصمم مواقع ويب
+</footer>
+
+</body>
+</html>
