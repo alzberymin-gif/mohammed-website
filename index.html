@@ -1,203 +1,161 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>محمد المجاهد - مصمم مواقع</title>
-  <link rel="icon" href="favicon.png" type="image/png">
-  <style>
-    /* ===== ألوان وخطوط ===== */
-    :root {
-      --primary-color: #1e3a8a; /* أزرق */
-      --accent-color: #FFD700; /* ذهبي */
-      --bg-color: #ffffff;
-      --text-color: #333333;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محمد المجاهد | مصمم مواقع محترف</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
 
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      line-height: 1.6;
-    }
-
-    header {
-      background-color: var(--primary-color);
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-
-    nav {
-      margin-top: 10px;
-    }
-
-    nav a {
-      color: #fff;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      color: var(--accent-color);
-    }
-
-    section {
-      padding: 60px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    h2 {
-      color: var(--primary-color);
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    /* ===== الرئيسية ===== */
-    #home {
-      background-color: #f0f4ff;
-      text-align: center;
-    }
-
-    #home p {
-      font-size: 1.2rem;
-    }
-
-    /* ===== عني ===== */
-    #about {
-      background-color: #ffffff;
-    }
-
-    #about p {
-      max-width: 800px;
-      margin: auto;
-      text-align: center;
-    }
-
-    /* ===== معرض أعمال ===== */
-    #portfolio {
-      background-color: #f0f4ff;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .project {
-      background-color: #fff;
-      border: 2px solid var(--primary-color);
-      border-radius: 10px;
-      width: 250px;
-      padding: 15px;
-      text-align: center;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .project:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    }
-
-    .project img {
-      width: 100%;
-      border-radius: 5px;
-      margin-bottom: 10px;
-    }
-
-    /* ===== تواصل ===== */
-    #contact {
-      background-color: #ffffff;
-      text-align: center;
-    }
-
-    #contact p {
-      font-size: 1.2rem;
-    }
-
-    footer {
-      background-color: var(--primary-color);
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-    }
-
-    /* ===== استجابة ===== */
-    @media(max-width:768px){
-      nav a {
-        display: block;
-        margin: 10px 0;
-      }
-
-      #portfolio {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  </style>
+    <style>
+        body { font-family: 'Cairo', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); }
+        .dark-mode { background-color: #0f172a; color: #f8fafc; }
+        .dark-mode .glass { background: rgba(15, 23, 42, 0.8); border-color: #1e293b; }
+        .dark-mode .bg-white { background-color: #1e293b; color: white; }
+        .dark-mode .text-slate-500 { color: #94a3b8; }
+    </style>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-900 transition-colors duration-300" id="body">
 
-  <header>
-    <h1>محمد المجاهد</h1>
-    <p>مصمم مواقع</p>
-    <nav>
-      <a href="#home">الرئيسية</a>
-      <a href="#about">عني</a>
-      <a href="#portfolio">معرض أعمال</a>
-      <a href="#contact">تواصل</a>
+    <nav class="fixed w-full z-50 glass border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 h-16 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="bg-blue-600 w-10 h-10 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-blue-200">م</div>
+                <span class="text-xl font-black tracking-tight">محمد المجاهد</span>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-8 font-medium">
+                <a href="#home" class="hover:text-blue-600 transition">الرئيسية</a>
+                <a href="#about" class="hover:text-blue-600 transition">عني</a>
+                <a href="#portfolio" class="hover:text-blue-600 transition">أعمالي</a>
+                <a href="#contact" class="hover:text-blue-600 transition">تواصل معي</a>
+                <button onclick="toggleDarkMode()" class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition">
+                    <i data-lucide="moon" id="theme-icon"></i>
+                </button>
+            </div>
+        </div>
     </nav>
-  </header>
 
-  <!-- الرئيسية -->
-  <section id="home">
-    <h2>مرحباً بكم في موقعي</h2>
-    <p>أنا محمد المجاهد، مصمم مواقع محترف أقدم لك أفضل التصاميم الحديثة والمتجاوبة لجميع الأجهزة.</p>
-  </section>
+    <section id="home" class="pt-32 pb-20 px-4 min-h-screen flex flex-col items-center justify-center text-center">
+        <div data-aos="fade-up">
+            <span class="bg-blue-100 text-blue-700 px-4 py-1.5 rounded-full text-sm font-bold">مصمم مواقع محترف</span>
+            <h1 class="text-5xl md:text-7xl font-black mt-6 mb-4 leading-tight">
+                أصنع تجارب ويب <br> <span class="text-blue-600 underline decoration-blue-200 underline-offset-8">عصرية ومبتكرة</span>
+            </h1>
+            <p class="text-slate-500 text-lg max-w-2xl mx-auto mb-10">
+                أنا محمد المجاهد، أقدم لك أفضل التصاميم الحديثة والمتجاوبة التي تضمن لعملك حضوراً رقمياً متميزاً واحترافياً.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#portfolio" class="bg-blue-600 text-white px-8 py-4 rounded-2xl font-bold flex items-center gap-2 hover:bg-blue-700 transition shadow-xl shadow-blue-200">
+                    مشاهدة أعمالي <i data-lucide="layout-grid" class="w-5 h-5"></i>
+                </a>
+                <a href="#contact" class="bg-white border border-slate-200 px-8 py-4 rounded-2xl font-bold hover:bg-slate-50 transition shadow-sm text-slate-700">
+                    تحدث معي
+                </a>
+            </div>
+        </div>
+    </section>
 
-  <!-- عني -->
-  <section id="about">
-    <h2>عني</h2>
-    <p>أحب تصميم المواقع التي تجمع بين الجمال والاحترافية. خبرتي تمتد لسنوات في تصميم واجهات المستخدم وتجربة المستخدم.</p>
-  </section>
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 text-center" data-aos="fade-up">
+            <h2 class="text-3xl font-bold mb-6">من أنا؟</h2>
+            <p class="text-xl text-slate-600 leading-relaxed">
+                أحب تصميم المواقع التي تجمع بين الجمال والاحترافية. خبرتي تمتد لسنوات في تصميم واجهات المستخدم (UI) وتجربة المستخدم (UX)، وهدفي دائماً هو تحويل الأفكار إلى واقع رقمي مبهر.
+            </p>
+        </div>
+    </section>
 
-  <!-- معرض أعمال -->
-  <section id="portfolio">
-    <h2>معرض أعمالي</h2>
-    <div class="project">
-      <img src="https://via.placeholder.com/250x150" alt="مشروع 1">
-      <p>مشروع 1</p>
-    </div>
-    <div class="project">
-      <img src="https://via.placeholder.com/250x150" alt="مشروع 2">
-      <p>مشروع 2</p>
-    </div>
-    <div class="project">
-      <img src="https://via.placeholder.com/250x150" alt="مشروع 3">
-      <p>مشروع 3</p>
-    </div>
-  </section>
+        <section id="portfolio" class="py-20 px-4 bg-slate-50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold mb-4">معرض أعمالي</h2>
+                <div class="w-20 h-1.5 bg-blue-600 mx-auto rounded-full"></div>
+                <p class="mt-4 text-slate-500 text-lg">نماذج من تصاميمي الحديثة</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div data-aos="zoom-in" class="bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-2xl transition-all group">
+                    <div class="h-52 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&auto=format&fit=crop" alt="تصميم مواقع" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2 text-blue-600">منصة أعمال ذكية</h3>
+                        <p class="text-slate-500 text-sm">واجهة عصرية متوافقة مع جميع الشاشات تركز على تجربة المستخدم.</p>
+                    </div>
+                </div>
 
-  <!-- تواصل -->
-  <section id="contact">
-    <h2>تواصل معي</h2>
-    <p>📞 الهاتف: +967735896993</p>
-    <p>💌 البريد الإلكتروني: <a href="mailto:alkimoha027@gmail.com">example@example.com</a></p>
-  </section>
+                <div data-aos="zoom-in" data-aos-delay="100" class="bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-2xl transition-all group">
+                    <div class="h-52 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1557821552-17105176677c?w=500&auto=format&fit=crop" alt="متجر إلكتروني" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2 text-purple-600">متجر إلكتروني متكامل</h3>
+                        <p class="text-slate-500 text-sm">تصميم متجر جذاب مع تجربة تسوق سهلة وسريعة للمستخدمين.</p>
+                    </div>
+                </div>
 
-  <footer>
-    <p>© 2025 محمد المجاهد - جميع الحقوق محفوظة</p>
-  </footer>
+                <div data-aos="zoom-in" data-aos-delay="200" class="bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-2xl transition-all group">
+                    <div class="h-52 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=500&auto=format&fit=crop" alt="تطبيق جوال" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2 text-green-600">تطبيقات الجوال</h3>
+                        <p class="text-slate-500 text-sm">تصميم واجهات تطبيقات تفاعلية بلمسات فنية واحترافية.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section id="contact" class="py-20 bg-blue-600 text-white px-4">
+        <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+            <h2 class="text-4xl font-black mb-8">دعنا نبدأ مشروعك القادم!</h2>
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-blue-500 p-8 rounded-3xl shadow-inner">
+                    <i data-lucide="phone" class="mx-auto mb-4 w-10 h-10"></i>
+                    <h3 class="text-xl font-bold mb-2 text-blue-100">الهاتف</h3>
+                    <p class="text-2xl font-bold" dir="ltr">+967 735896993</p>
+                </div>
+                <div class="bg-blue-500 p-8 rounded-3xl shadow-inner">
+                    <i data-lucide="mail" class="mx-auto mb-4 w-10 h-10"></i>
+                    <h3 class="text-xl font-bold mb-2 text-blue-100">البريد الإلكتروني</h3>
+                    <p class="text-xl font-bold">alkimoha027@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 border-t border-slate-200 text-center text-slate-500 dark:bg-slate-900">
+        <p>© 2025 محمد المجاهد - جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({ duration: 1000, once: true });
+        
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Dark Mode Toggle
+        function toggleDarkMode() {
+            const body = document.getElementById('body');
+            const icon = document.getElementById('theme-icon');
+            body.classList.toggle('dark-mode');
+            
+            if(body.classList.contains('dark-mode')) {
+                icon.setAttribute('data-lucide', 'sun');
+            } else {
+                icon.setAttribute('data-lucide', 'moon');
+            }
+            lucide.createIcons();
+        }
+    </script>
 </body>
 </html>
